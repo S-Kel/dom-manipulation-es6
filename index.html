@@ -6,6 +6,8 @@
 	<title>Create List Elements</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -29,8 +31,7 @@
 	</nav>
 
 	<div class="container">
-		<h1>Hello World</h1>
-
+		<h1>YeYo!</h1>		
 		<div class="row">
 			<div class="col-md-6">
 				<div class="form-group">
@@ -41,15 +42,9 @@
 				<button type="submit" id="add-item" class="btn btn-primary">Add</button>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<ul id="myList" class="list-group">
-					<li class="list-group-item">Hi there</li>
-					<li class="list-group-item">Hi You</li>
-				</ul>
-			</div>
+		<div class="row no-gutters mt-3 p-1 card-row" id="myList">
+			<div class="col-md-4"></div>
 		</div>
-
 
 		<script src="js/list.js"></script>
 		<script>
@@ -71,7 +66,7 @@
 				if (evt.keyCode === 13) addItem();
 			});
 
-			addItem = ()=> {
+			addItem = () => {
 				const item = inputItem.value;
 				if (!item)
 					alert('Please enter an item');
@@ -87,6 +82,7 @@
 				console.log(`${text} is successfuly removed...`);
 			}
 			//			console.log(listItems);
+
 		</script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -1,0 +1,10 @@
+.card-row{
+	background: #fafafa;
+}
+.cards{
+	transition: .4s all ease-in;	
+}
+.cards:hover{
+	transform: scale(0.95);
+	z-index: 100;
+}
