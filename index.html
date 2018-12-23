@@ -6,7 +6,7 @@
 	<title>Create List Elements</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
+
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -31,7 +31,7 @@
 	</nav>
 
 	<div class="container">
-		<h1>YeYo!</h1>		
+		<h1>YeYo!</h1>
 		<div class="row">
 			<div class="col-md-6">
 				<div class="form-group">
@@ -45,45 +45,36 @@
 		<div class="row no-gutters mt-3 p-1 card-row" id="myList">
 			<div class="col-md-4"></div>
 		</div>
+		<footer class="pt-4 my-md-5 pt-md-5 border-top">
+			<div class="row">
+				<div class="col-12 col-md">					
+					<small class="d-block mb-3 text-muted">&copy; Amenillionaire <script>document.write(new Date().getFullYear());</script></small>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Features</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="text-muted" href="#">Stuff for developers</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Resources</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="text-muted" href="#">Resource</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md">
+					<h5>About</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="text-muted" href="#">Privacy</a></li>
+						<li><a class="text-muted" href="#">Terms</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 
 		<script src="js/list.js"></script>
-		<script>
-			const myList = document.getElementById('myList');
-			const addItemBtn = document.getElementById('add-item');
-			const inputItem = document.getElementById('input-item');
+		<script src="js/run.js"></script>
 
-			const list = new List(myList);
-			list.update();
-
-			// Listen for submit click
-			addItemBtn.addEventListener('click', (evt) => {
-				evt.preventDefault();
-				addItem();
-			});
-
-			// 
-			inputItem.addEventListener('keyup', (evt) => {
-				if (evt.keyCode === 13) addItem();
-			});
-
-			addItem = () => {
-				const item = inputItem.value;
-				if (!item)
-					alert('Please enter an item');
-				else {
-					list.add(item);
-					inputItem.value = '';
-				}
-			}
-
-			removeElement = (evt) => {
-				const text = evt.parentElement.children[0].textContent;
-				list.remove(text);
-				console.log(`${text} is successfuly removed...`);
-			}
-			//			console.log(listItems);
-
-		</script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

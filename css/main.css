@@ -1,10 +1,30 @@
-.card-row{
+.card-row {
 	background: #fafafa;
+	
 }
-.cards{
-	transition: .4s all ease-in;	
+.card-body{
+	padding: 1.25rem 1rem 0 1.25rem;
 }
-.cards:hover{
+.cards {
+	transition: .4s all ease-in;
+}
+
+.cards:hover {
+	/*
 	transform: scale(0.95);
 	z-index: 100;
+*/
+}
+
+.btn-props {
+	border: 1px solid #ccc;
+	margin: 0px 5px 5px 15px;
+	color: red;
+}
+
+.btn-props:hover {
+	border: 1px solid #aaa;
+	text-decoration: none;
+	color: #fafafb;
+	background: orange;
 }
