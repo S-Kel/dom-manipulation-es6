@@ -27,10 +27,12 @@ addItem = () => {
 }
 
 removeElement = (evt) => {
-	const text = evt.parentElement.children[1].children[0].textContent;
+	const grandParent = evt.parentElement.parentElement;
+	const parent = evt.parentElement;
+	const granChildText = parent.children[1].children[0].textContent;
 	console.log(evt.parentElement)
-	console.log(evt.parentElement.firstElementChild.nextElementSibling.firstElementChild.innerHTML)
-	let txt = evt.parentElement.firstElementChild.nextElementSibling.firstElementChild.innerHTML;
-	list.remove(txt);
+	
+	list.remove(granChildText);
+	grandParent.removeChild(parent);
 	console.log(`${text} is successfuly removed...`);
 }

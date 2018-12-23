@@ -50,7 +50,6 @@ class List {
 	update() {
 		List.clearItem(this);
 		this.items.forEach((text, index) => {
-//			console.log(text)
 			this.listElement.innerHTML += (List.createElement(text, index));
 		});
 	}
@@ -62,6 +61,7 @@ class List {
 
 	remove(text) {
 		this.items = this.items.filter(item =>  List.capitalize(item) !== List.capitalize(text));
+
 		this.update();
 	}
 }
